@@ -1,0 +1,95 @@
+-Coisas que são criadas:
+
+-Todas paginas geradas mostram o nome do blog e a descrição
+-Cada listagem cria paginas de até 10 posts (um bom numero ao meu ver)
+
+--Gerador de pagina principal
+    -Coloca posts por ordem de data (Mais novo ao mais velho)
+    -Mostra : 
+      -cerca de 10 N posts contendo:
+        -postN.titulo
+        -postN.data
+        -postN.texto
+        -postN.tags
+      -link para os proximos 10 posts
+
+--Gerador de pagina de posts
+    -Mostra :
+      -post.titulo
+      -post.data
+      -post.texto
+      -post.tags
+      -post.cometarios
+
+--Gerador de pagina por tag
+    -Coloca posts por ordem "pilha" de data que contenham uma tag X
+    -Mostra : 
+      -cerca de 10 N posts contendo:
+        -postN.titulo
+        -postN.data
+        -postN.texto
+        -postN.tags
+      -link para mais 10 outros posts
+
+--Gerador de pagina por data
+    -Coloca posts por ordem "pilha" de data de data X a data Y
+    -Mostra : 
+      -cerca de 10 N posts contendo:
+        -postN.titulo
+        -postN.data
+        -postN.texto
+        -postN.tags
+      -link para mais 10 outros posts
+
+--Gerador de post
+    -Gera um post
+    -Caixa que "definem"
+        -post.titulo
+	-post.texto
+	-post.tags
+    -Definido automaticamente
+    	-post.data (pego do navegador(?))
+        -post.comentarios (inicialmente vazio)
+
+--Editor de post?
+
+--Exclusor de post?
+
+--Gerador de comentario
+    -Gera um comentario
+    -Caixa que "definem"
+        -comentario.nome (anonimo caso vazio)
+	-comentario.texto
+    -Definido automaticamnete
+        -post.data (pego do nagvegado(?))
+	-post.comentario (inicialmente vazio)
+    -Adiciona este comentario a post.comentario (caso esteja se postando ao post)
+    -Adiciona este comentario a comentario.comentario (caso esteja se postando ao comentario)
+
+--Exclusor de comentario?
+
+Exemplo:
+
+*****************************************
+*<Nome blog>				*
+*					*
+*   <titulo>			<desc> 	*
+*   <texto>				*
+*   <tags>				*
+*					*
+*   <titulo>				*
+*   <texto>				*
+*   <tags>				*
+*					*
+*   <pagAnt><proxPag>			*
+*****************************************
+
+*****************************************
+*<Nome blog>				*
+*					*
+*   <titulo>			<desc> 	*
+*   <texto>				*
+*   <Tags>				*
+*   <Comentarios>			*
+*   <Resp>				*
+*****************************************
