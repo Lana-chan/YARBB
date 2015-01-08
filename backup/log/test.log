@@ -1,0 +1,6 @@
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+--------------------------------------------
+WelcomeControllerTest: test_should_get_index
+--------------------------------------------
+Processing by WelcomeController#index as HTML
+Completed 500 Internal Server Error in 4ms

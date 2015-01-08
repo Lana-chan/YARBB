@@ -1,0 +1,7 @@
+class BlogsController < ApplicationController
+
+
+	def new
+		@blog = Blogs.first
+	end
+end

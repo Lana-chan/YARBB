@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= blog.title %></title>
+    
+  </head>
+  <body>
+    <div id="wrapper">
+      <div class="head<%= blog.title %>
+	<%
+		
+	%>
+      </div>
+      <div class="content">
+        <div id="posts">
+          <% @posts.each do |v| %>
+            <div class="box">
+              <span class="title"><%= v.title %></span>
+              <span class="content"><%= v.content %></span>
+              <span class="footer"><a href="/posts/<%= v.permalink %>"><%= v.timestamp %></a></span>
+            </div>
+          <% end %>
+        </div>
+        <div id="sidebar">
+          <div class="box">
+            <span class="avatar"><img src="/images/avatar.png" alt="avatar"></span>
+            <span class="content"><%= blog.description %></span>
+          </div>
+        </div>
+        <span class="clear"></span>
+        <div class="footer">
+          footer goes here
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

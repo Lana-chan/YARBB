@@ -11,13 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150107180322) do
+ActiveRecord::Schema.define(version: 20150106030048) do
 
   create_table "blogs", force: true do |t|
-    t.string   "title"
-    t.string   "description"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string "title"
+    t.string "description"
+    t.string "favicon"
+    t.string "stylesheet"
   end
 
   create_table "comments", force: true do |t|
@@ -25,30 +25,18 @@ ActiveRecord::Schema.define(version: 20150107180322) do
     t.string   "content"
     t.datetime "date"
     t.integer  "post_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
   end
-
-  add_index "comments", ["post_id"], name: "index_comments_on_post_id"
 
   create_table "posts", force: true do |t|
     t.string   "title"
     t.string   "content"
     t.datetime "date"
     t.integer  "blog_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
   end
-
-  add_index "posts", ["blog_id"], name: "index_posts_on_blog_id"
 
   create_table "tags", force: true do |t|
-    t.string   "label"
-    t.integer  "post_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string  "label"
+    t.integer "post_id"
   end
-
-  add_index "tags", ["post_id"], name: "index_tags_on_post_id"
 
 end
